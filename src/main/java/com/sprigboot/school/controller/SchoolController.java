@@ -3,8 +3,10 @@ package com.sprigboot.school.controller;
 
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 
@@ -38,6 +40,9 @@ public class SchoolController {
 	}
 	
 	
-	
+	@GetMapping("{id}")
+	public Optional<School> getDetailById(@PathVariable ("id") long id) {
+		return schoolService.getSchoolDetailById(id);
+	}
 	
 }

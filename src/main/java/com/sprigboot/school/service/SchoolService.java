@@ -1,6 +1,7 @@
 package com.sprigboot.school.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
@@ -24,5 +25,7 @@ public class SchoolService {
 		return schoolRepository.findAll();
 	}
 	
-	
+	public Optional<School> getSchoolDetailById(long id) {
+		return schoolRepository.findById(id);
+	}
 }
