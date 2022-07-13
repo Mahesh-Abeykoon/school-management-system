@@ -39,7 +39,7 @@ public class SchoolController {
 		return schoolService.getAllSchoolDetails();
 	}
 	
-	
+	//to get some specific details of the school
 	@GetMapping("{id}")
 	public Optional<School> getDetailById(@PathVariable ("id") long id) {
 		return schoolService.getSchoolDetailById(id);
