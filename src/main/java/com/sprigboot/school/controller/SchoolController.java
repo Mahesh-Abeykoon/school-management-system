@@ -49,6 +49,7 @@ public class SchoolController {
 		return schoolService.getSchoolDetailById(schId);
 	}
 	
+	//to delte specific details using the id
 	@DeleteMapping("{id}")
 	public ResponseEntity <String> deleteSchool(@PathVariable ("id") long id) {
 		
