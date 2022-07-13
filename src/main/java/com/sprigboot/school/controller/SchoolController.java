@@ -58,4 +58,12 @@ public class SchoolController {
 	
 	}
 	
+	
+	@PutMapping("{id}")
+	public School updateSchool(@PathVariable ("id") long id, @RequestBody School school) {
+		
+		return schoolService.updateStudentDetails(school, id);
+	}
+	
+	
 }

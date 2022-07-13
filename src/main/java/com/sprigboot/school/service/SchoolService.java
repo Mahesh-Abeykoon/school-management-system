@@ -37,6 +37,22 @@ public class SchoolService {
 		
 	}
 
+	public School updateStudentDetails(School school, long id) {
+		 School existingSchool = schoolRepository.findById(id).orElseThrow(null);
+		 
+		 existingSchool.setSchoolName(school.getSchoolName());
+		 existingSchool.setRegisterdNumber(school.getRegisterdNumber());
+		 existingSchool.setStudentName(school.getStudentName());	
+		 existingSchool.setStudentGrade(school.getStudentGrade());
+		 existingSchool.setGuardianName(school.getGuardianName());
+		 existingSchool.setContactDetails(school.getContactDetails());
+		 
+		 schoolRepository.save(existingSchool);
+		 
+		return existingSchool;
+	}
+
+	
 	
 
 	
