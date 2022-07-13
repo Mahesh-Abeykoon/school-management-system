@@ -1,5 +1,7 @@
 package com.sprigboot.school.service;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import com.sprigboot.school.model.School;
@@ -15,7 +17,12 @@ public class SchoolService {
 	}
 
 	public School saveSchool(School school) {
-		
 		return schoolRepository.save(school);
 	}
+	
+	public List <School>getAllSchoolDetails(){
+		return schoolRepository.findAll();
+	}
+	
+	
 }

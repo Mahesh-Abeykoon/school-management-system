@@ -2,6 +2,9 @@ package com.sprigboot.school.controller;
 
 
 
+import java.util.List;
+
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 
@@ -12,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/schools")
+@RequestMapping("/schools")
 
 public class SchoolController {
 
@@ -22,14 +25,16 @@ public class SchoolController {
 		this.schoolService=schoolService;
 	}
 	
-	@PostMapping()
+	@PostMapping("/saveSchool")
 	public School saveSchoolDetails (@RequestBody School school) {
 		return schoolService.saveSchool(school);
 		 
 		 
 	}
-	
-	
+	@GetMapping()
+	public List<School> getAllDetails(){
+		return schoolService.getAllSchoolDetails();
+	}
 	
 	
 	
