@@ -25,16 +25,18 @@ public class SchoolController {
 		this.schoolService=schoolService;
 	}
 	
+	//to post details of school managing
 	@PostMapping("/saveSchool")
 	public School saveSchoolDetails (@RequestBody School school) {
-		return schoolService.saveSchool(school);
-		 
-		 
+		return schoolService.saveSchool(school);	 
 	}
+	
+	//to get all the exisiting details of school system
 	@GetMapping()
 	public List<School> getAllDetails(){
 		return schoolService.getAllSchoolDetails();
 	}
+	
 	
 	
 	
