@@ -28,4 +28,16 @@ public class SchoolService {
 	public Optional<School> getSchoolDetailById(long id) {
 		return schoolRepository.findById(id);
 	}
+	
+	
+	public void deleteSchoolDetails (long id) {
+		
+		 schoolRepository.deleteById(id);
+		 
+		
+	}
+
+	
+
+	
 }
