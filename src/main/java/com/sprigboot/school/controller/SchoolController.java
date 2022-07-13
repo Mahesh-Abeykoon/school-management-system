@@ -41,8 +41,8 @@ public class SchoolController {
 	
 	//to get some specific details of the school
 	@GetMapping("{id}")
-	public Optional<School> getDetailById(@PathVariable ("id") long id) {
-		return schoolService.getSchoolDetailById(id);
+	public Optional<School> getDetailById(@PathVariable ("id") long schId) {
+		return schoolService.getSchoolDetailById(schId);
 	}
 	
 }
