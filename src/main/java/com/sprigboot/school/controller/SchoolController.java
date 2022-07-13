@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.sprigboot.school.service.SchoolService;
 
 @Controller
-@RequestMapping("api/students")
+
 
 public class SchoolController {
 
